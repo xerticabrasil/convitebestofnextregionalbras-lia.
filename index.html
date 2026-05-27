@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Convite | Best of Next Brasília</title>
+    <title>Gerador de Convite | O Melhor do Next - Brasília</title>
    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -244,10 +244,12 @@
                                        
                                         <div class="h-12 w-px bg-white/20"></div>
                                        
-                                        <!-- Logo do Google Cloud -->
-                                        <img id="logo-google" src="https://unqork.com/wp-content/uploads/2024/04/Google-Cloud-Logo-1024x267-1.png"
-                                             alt="Google Cloud"
-                                             class="h-[55px] object-contain drop-shadow-lg">
+                                        <!-- Logo do Google Cloud Original com recorte preciso da nuvem -->
+                                        <div class="overflow-hidden relative h-[45px] w-[180px] drop-shadow-lg opacity-90 -ml-4">
+                                            <img id="logo-google" src="https://unqork.com/wp-content/uploads/2024/04/Google-Cloud-Logo-1024x267-1.png"
+                                                 alt="Google Cloud"
+                                                 class="absolute max-w-none h-[45px] w-auto top-0 left-[-40px]">
+                                        </div>
                                     </div>
 
 
@@ -269,7 +271,7 @@
 
                                             <div class="space-y-6 pr-12">
                                                 <p class="text-2xl text-white font-medium leading-relaxed">
-                                                    Você é o convidado especial da <span class="font-bold">Xertica.ai</span> para aproveitar o melhor do evento <span class="text-brand-blue font-bold">Best of Next Regional Brasília</span>.
+                                                    Você é o convidado especial da <span class="font-bold">Xertica.ai</span> para aproveitar o melhor do evento <span class="text-brand-blue font-bold">O Melhor do Next - Brasília</span>.
                                                 </p>
                                                 <p class="text-xl text-slate-300 leading-relaxed font-light">
                                                     Venha descobrir as principais inovações e anúncios do Google Cloud Next, com conteúdo relevante e direcionado para lideranças locais, além de excelentes oportunidades de networking.
@@ -359,7 +361,7 @@
                             <p id="whatsappCopy" class="text-base text-slate-300 whitespace-pre-wrap font-sans leading-relaxed break-words break-all">Olá, [Nome]!
 
 
-Temos o prazer de te convidar, representando a [Empresa], para o Best of Next Regional Brasília, um evento exclusivo do Google Cloud que a Xertica tem orgulho em patrocinar.
+Temos o prazer de te convidar, representando a [Empresa], para O Melhor do Next - Brasília, um evento exclusivo do Google Cloud que a Xertica tem orgulho em patrocinar.
 
 
 📅 16 de junho de 2026
@@ -448,7 +450,7 @@ Por favor, avise-me por aqui após a inscrição para que possamos organizar sua
                 whatsappCopy.textContent = `Olá, ${copyName}!
 
 
-Temos o prazer de te convidar, representando a ${copyComp}, para o Best of Next Regional Brasília, um evento exclusivo do Google Cloud que a Xertica tem orgulho em patrocinar.
+Temos o prazer de te convidar, representando a ${copyComp}, para O Melhor do Next - Brasília, um evento exclusivo do Google Cloud que a Xertica tem orgulho em patrocinar.
 
 
 📅 16 de junho de 2026
@@ -551,7 +553,7 @@ Por favor, avise-me por aqui após a inscrição para que possamos organizar sua
             loadingScreen.classList.add('flex');
 
 
-            const prompt = `Escreva uma mensagem de WhatsApp convidando o/a executivo(a) ${name} (da empresa ${company}) para o 'Best of Next Regional Brasília', um evento exclusivo do Google Cloud patrocinado pela parceira Xertica.
+            const prompt = `Escreva uma mensagem de WhatsApp convidando o/a executivo(a) ${name} (da empresa ${company}) para 'O Melhor do Next - Brasília', um evento exclusivo do Google Cloud patrocinado pela parceira Xertica.
            
 Detalhes obrigatórios do evento:
 - Data: 16 de junho de 2026 às 12h
@@ -623,7 +625,7 @@ Importante: Escreva apenas a mensagem pronta para enviar, sem formatações mark
             btn.classList.add('opacity-50');
 
 
-            const prompt = `Como executivo de vendas da Xertica (parceira Google Cloud), vou receber ${name} da empresa "${company}" no evento de inovação Best of Next do Google Cloud.
+            const prompt = `Como executivo de vendas da Xertica (parceira Google Cloud), vou receber ${name} da empresa "${company}" no evento de inovação O Melhor do Next do Google Cloud.
             Sugira exatamente 3 tópicos de 'quebra-gelo' (icebreakers) curtos e inteligentes de negócios. Os tópicos devem explorar como os desafios típicos do setor da empresa "${company}" podem ser resolvidos com tecnologias de nuvem ou IA Generativa.
            
             Retorne a resposta ESTRITAMENTE em formato HTML: uma tag <ul> com 3 tags <li>. Não adicione textos de saudação, títulos ou explicações antes ou depois. Use linguagem de alto nível executivo (C-Level).`;
@@ -727,7 +729,7 @@ Importante: Escreva apenas a mensagem pronta para enviar, sem formatações mark
                 const link = document.createElement('a');
                 let fileNameName = inputName.value.trim().replace(/\s+/g, '_');
                 if(!fileNameName) fileNameName = "convidado";
-                link.download = `Convite_BestOfNext_${fileNameName}.png`;
+                link.download = `Convite_OMelhorDoNext_${fileNameName}.png`;
                 link.href = canvas.toDataURL('image/png', 1.0);
                 link.click();
 
